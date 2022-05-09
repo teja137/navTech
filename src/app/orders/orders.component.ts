@@ -12,5 +12,7 @@ studentsData
 
   ngOnInit(): void {
   }
-
+  delete(){
+    alert("Do you want to delete?")
+  }
 }
