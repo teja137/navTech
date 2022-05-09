@@ -1,103 +1,98 @@
-<nav class="navbar navbar-light bg-primary">
-  <div class="container-fluid">
-    <h1 style="color: white">Order Details</h1>
-    <div class="d-flex">
-      <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success" (click)="addNewOrder()">
-        New Order
-      </button>
-      <!-- <button routerLink="/home" (click)="logout()" class="btn btn-danger mx-2">
-        LogOut
-      </button> -->
-    </div>
-  </div>
-</nav>
-
-<!-- <div class="bg-image" 
-style="background-image: url('https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
-       height: 95vh"> -->
-<!-- <table class="table mt-3"> -->
-<table class="table">
-
-  <thead>
-    <tr>
-      <th scope="col">Order Number</th>
-      <th scope="col">Order Due Date</th>
-      <th scope="col">Customers Buyers Name</th>
-      <th scope="col">Customers Address</th>
-      <th scope="col">Customers Phone</th>
-      <th scope="col">Order Total (total value of order)</th>
-    </tr>
-  </thead>
-  <tbody *ngFor="let data of ordersData">
-    <tr>
-      <!-- <td>{{ data.id }}</td> -->
-      <td>{{ data.orderNumber }}</td>
-      <td>{{ data.orderDueDate }}</td>
-      <td>{{ data.customersBuyersName }}</td>
-      <td>{{ data.ccustomersAddressontact }}</td>
-      <td>{{ data.customersPhone }}</td>
-      <td>{{ data.orderTotal }}</td>
-      <td>
-        <button class="btn btn-info" type="button" data-bs-toggle="modal"
-          data-bs-target="#exampleModal">
-          Edit
-        </button>
-        <button class="btn btn-danger mx-3" type="button" id="cancel"
-          data-bs-dismiss="modal" (click)="delete()">
-          Delete
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Order Details</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<div class="img">
+    <nav class="navbar navbar-light bg-dark">
+        <div class="container-fluid">
+          <h1 style="color: white">Order Details</h1>
+          <div class="d-flex">
+            <button (click)="clickAddOrders()" type="button" data-bs-toggle="modal" data-bs-target="#editModal" class="btn btn-success">
+              New Order
+            </button>
+          </div>
+        </div>
+      </nav>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Order Number</th>
+            <th scope="col">Order Due Date</th>
+            <th scope="col">Customers Buyers Name</th>
+            <th scope="col">Customers Address</th>
+            <th scope="col">Customers Phone</th>
+            <th scope="col">Order Total <br> (total value of order)</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let data of orders">
+          <tr>
+            <td>{{ data.orderNumber }}</td>
+            <td>{{ data.orderDueDate }}</td>
+            <td>{{ data.customersBuyersName }}</td>
+            <td>{{ data.customersAddress }}</td>
+            <td>{{ data.customersPhone }}</td>
+            <td>{{ data.orderTotal }}</td>
+            <td>
+              <button (click)="onEdit(data)" class="btn btn-primary" type="button" data-bs-toggle="modal"
+              data-bs-target="#editModal">
+              Edit
+            </button>
+            </td>
+              <td>
+                  <button class="btn btn-danger mx-3" type="button" id="cancel"
+                  data-bs-dismiss="modal" (click)="deleteOrders(data.id)">
+                  Delete
+                </button>
+              </td>
+             
+            
+          </tr>
+        </tbody>
+      </table>
+      <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editModalLabel">Order Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form [formGroup]="formValue">
+                <div class="mb-3">
+                  <label for="orderNumberr" class="form-label">Order Number</label>
+                  <input type="text" formControlName="id" class="form-control" id="orderNumberr"/>
+                </div>
+                <div class="mb-3">
+                  <label for="orderDueDatee" class="form-label">Order Due Date</label>
+                  <input type="text" formControlName="orderDueDate" class="form-control" id="orderDueDatee"/>
+                </div>
+                <div class="mb-3">
+                  <label for="customersBuyersNamee" class="form-label">Customers Buyers Name</label>
+                  <input type="text" formControlName="customersBuyersName" class="form-control" id="customersBuyersNamee" />
+                </div>
+                <div class="mb-3">
+                  <label for="customersAddresss" class="form-label">Customers Address</label>
+                  <input type="text" formControlName="customersAddress" class="form-control" id="customersAddresss" />
+                </div>
+                <div class="mb-3">
+                  <label for="customersPhonee" class="form-label">Customers Phone</label>
+                  <input type="text" formControlName="customersPhone" class="form-control" id="customersPhonee" />
+                </div>
+                <div class="mb-3">
+                  <label for="orderTotall" class="form-label">Order Total</label>
+                  <input type="number" formControlName="orderTotal" class="form-control" id="orderTotall" />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">
+                  Close
+              </button>
+              <button type="button" *ngIf="showUpdate" data-bs-dismiss="modal" class="btn btn-primary" (click)="updateOrders()">
+                  Edit
+              </button>
+              <button type="button" data-bs-dismiss="modal" *ngIf="showAdd" (click)="postOrders()" class="btn btn-primary">
+                  Add
+              </button>
+          </div>
+          </div>
+          </div>
       </div>
-      <div class="modal-body">
-        <form [formGroup]="formValue">
-          <div class="mb-3">
-            <label for="orderNumber" class="form-label">Order Number</label>
-            <input type="number" formControlName="orderNumber" class="form-control" id="orderNumber"/>
-          </div>
-          <div class="mb-3">
-            <label for="orderDueDate" class="form-label">Order Due Date</label>
-            <input type="date" formControlName="orderDueDate" class="form-control" id="orderDueDate"/>
-          </div>
-          <div class="mb-3">
-            <label for="customersBuyersName" class="form-label">Customers Buyers Name</label>
-            <input type="text" formControlName="customersBuyersName" class="form-control" id="customersBuyersName" />
-          </div>
-          <div class="mb-3">
-            <label for="customersAddress" class="form-label">Customers Address</label>
-            <input type="text" formControlName="customersAddress" class="form-control" id="customersAddress" />
-          </div>
-          <div class="mb-3">
-            <label for="customersPhone" class="form-label">Customers Phone</label>
-            <input type="text" formControlName="customersPhone" class="form-control" id="customersPhone" />
-          </div>
-          <div class="mb-3">
-            <label for="orderTotal" class="form-label">Order Total</label>
-            <input type="text" formControlName="orderTotal" class="form-control" id="orderTotal" />
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">
-            Close
-        </button>
-        <button type="button" class="btn btn-primary" (click)="updateOrderDetails()">
-            Update
-        </button>
-
-
-    </div>
+      
 </div>
-</div>
-</div>
-<!-- </div> -->

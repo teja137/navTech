@@ -14,9 +14,21 @@ a{
     color: white;
 }
 .img{
+    object-fit: cover;
+    position: relative;
     background-image: url(https://images.unsplash.com/photo-1634746422503-33fde3f03b6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1092&q=80);
     background-position: center;
     background-repeat: repeat;
     background-size: cover;
-    height: 100vh;
+    height: 91vh;
+    object-fit: contain;
+}
+
+.txt{
+    position: absolute;
+    left: 50%;
+    top: 84%;
+}
+.text-danger{
+    color: red;
 }

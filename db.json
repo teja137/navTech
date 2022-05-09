@@ -2,30 +2,100 @@
   "orders": [
     {
       "id": 1,
-      "orderNumber": 1,
-      "orderDueDate":"21-03-12",
-      "customersBuyersName":"Divya",
-      "customersAddress":"flat no:300,siripuram,telangana,hyderabad",
-      "customersPhone":"+91 9634537224",
-      "orderTotal":4033
+      "orderNumber": "1",
+      "orderDueDate": "21-09-2022",
+      "customersBuyersName": "Alia Bhatt",
+      "customersAddress": "flat no:777, inko towers, Great streers, Mumbai, pincode: 574392",
+      "customersPhone": "+91 9830946173",
+      "orderTotal": "1028328"
     },
     {
-      "id": 2,
-      "orderNumber": 1,
-      "orderDueDate":"21-03-12",
-      "customersBuyersName":"Divya",
-      "customersAddress":"flat no:300,siripuram,telangana,hyderabad",
-      "customersPhone":"+91 9634537224",
-      "orderTotal":4033
+      "orderNumber": "2",
+      "orderDueDate": "05-05-2022",
+      "customersBuyersName": "Steve",
+      "customersAddress": "near Gate way of Indina, Delhi, pincode: 988903",
+      "customersPhone": "+91 7837492018",
+      "orderTotal": "2000",
+      "id": 2
     },
     {
-      "id": 3,
-      "orderNumber": 1,
-      "orderDueDate":"21-03-12",
-      "customersBuyersName":"Divya",
-      "customersAddress":"flat no:300,siripuram,telangana,hyderabad",
-      "customersPhone":"+91 9634537224",
-      "orderTotal":4033
+      "orderNumber": "3",
+      "orderDueDate": "17-10-2022",
+      "customersBuyersName": "Meghana Prasad",
+      "customersAddress": "kalakrith Appartments, block-A,falt no: 507, tarnaka, pin code: 500017",
+      "customersPhone": "+91 7993820779",
+      "orderTotal": "210137",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "orderNumber": "4",
+      "orderDueDate": "04-10-2023",
+      "customersBuyersName": "Ruth",
+      "customersAddress": "near chuech line, nepal city, pin code: 79882",
+      "customersPhone": "+91 9973862832",
+      "orderTotal": "283"
+    },
+    {
+      "id": 5,
+      "orderNumber": "5",
+      "orderDueDate": "11-04-2002",
+      "customersBuyersName": "Karthik",
+      "customersAddress": "bear the jung link park, Hi-tech chity, pin code: 7432",
+      "customersPhone": "+91 9783987493",
+      "orderTotal": "963"
+    },
+    {
+      "id": 6,
+      "orderNumber": "6",
+      "orderDueDate": "03-03-2022",
+      "customersBuyersName": "Rekha",
+      "customersAddress": "side of kfc, tower pills appartment, pimcode: 783920, USA",
+      "customersPhone": "+1 49873374839",
+      "orderTotal": "$687872"
+    },
+    {
+      "id": 7,
+      "orderNumber": "7",
+      "orderDueDate": "07-08-2022",
+      "customersBuyersName": "Wayne",
+      "customersAddress": "teh north pole research center, Antartica",
+      "customersPhone": "+71 9386982",
+      "orderTotal": "$87562912"
+    },
+    {
+      "id": 8,
+      "orderNumber": "8",
+      "orderDueDate": "09-09-2002",
+      "customersBuyersName": "Modi",
+      "customersAddress": "the plarment road, neart the red fort, Delhi",
+      "customersPhone": "+91 927839926",
+      "orderTotal": "908698623"
+    },
+    {
+      "id": 9,
+      "orderNumber": "9",
+      "orderDueDate": "01-01-2021",
+      "customersBuyersName": "Muthy Sudha",
+      "customersAddress": "apple towers, near the nature cure center, vizak, pin code: 96223",
+      "customersPhone": "+91 6127281872",
+      "orderTotal": 32323
+    },
+    {
+      "id": 10,
+      "orderNumber": "10",
+      "orderDueDate": "25-12-2022",
+      "customersBuyersName": "Bhavana",
+      "customersAddress": "Anantagrai Mountains, pin code: 565728",
+      "customersPhone": "+91 973647386",
+      "orderTotal": 137731
+    }
+  ],
+  "signUpUsers": [
+    {
+      "email": "teja@gmail.com",
+      "password": "teja",
+      "id": 1
     }
   ]
 }

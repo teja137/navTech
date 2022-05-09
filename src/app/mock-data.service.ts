@@ -14,7 +14,7 @@ export class MockDataService {
     get(){
       return this.http.get('http://localhost:3000/orders')
     }
-    put(id,data){
+    put(data:any,id:any){
       return this.http.put('http://localhost:3000/orders/'+id,data)
     }
     delete(id){
