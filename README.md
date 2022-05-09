@@ -3,12 +3,12 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
 
-![Screenshot (396)](https://user-images.githubusercontent.com/94112233/167514227-3e548dfb-4927-47f7-a562-729ba0eecf9b.png)
+
 
 ![Screenshot (395)](https://user-images.githubusercontent.com/94112233/167514218-72f32c14-bbbe-402c-b4cf-69b3716f6572.png)
 
 
-
+![Screenshot (396)](https://user-images.githubusercontent.com/94112233/167514227-3e548dfb-4927-47f7-a562-729ba0eecf9b.png)
 
 
 
