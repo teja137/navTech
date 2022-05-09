@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm;
-  constructor(private formBuilder:FormBuilder,route:Router) { }
+  constructor(private formBuilder:FormBuilder,private route:Router) { }
 
   ngOnInit(): void {
     this.loginForm=this.formBuilder.group({
@@ -18,6 +18,6 @@ export class LoginComponent implements OnInit {
     })
   }
   login(){
-     
+     this.route.navigate(['orders'])
   }
 }
