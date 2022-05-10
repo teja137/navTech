@@ -7,7 +7,7 @@ This is a Task from navTech for the interview.
 Login with Validations, remember me to auto login
 ![Screenshot (395)](https://user-images.githubusercontent.com/94112233/167514218-72f32c14-bbbe-402c-b4cf-69b3716f6572.png)
 
-Login Form
+Login Form, click check box to save your information and login.
 ![Screenshot (396)](https://user-images.githubusercontent.com/94112233/167514227-3e548dfb-4927-47f7-a562-729ba0eecf9b.png)
 
 
