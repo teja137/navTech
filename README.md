@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
-This is a Task from navTech for their interview.
+This is a Task from navTech for the interview.
 
 Login with Validations, remember me to auto login
 ![Screenshot (395)](https://user-images.githubusercontent.com/94112233/167514218-72f32c14-bbbe-402c-b4cf-69b3716f6572.png)
