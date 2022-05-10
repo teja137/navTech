@@ -30,7 +30,7 @@ json Data (mock data)
 
 
 
-Thank you for the intreview navTech team, hoping for Good news. Have a great time.
+Thank you for the interview navTech team, hoping for Good news. Have a great time.
 
 
 
