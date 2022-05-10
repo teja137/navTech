@@ -2,7 +2,7 @@
     <div class="txt">
         <h1>Your Delivery Our Priority</h1>
     </div>
-    <div class="container">
+    <div class=" container">
         <div class="row">
             <div class="col-md-6">
                 <div class="card">
@@ -12,7 +12,7 @@
                     <form [formGroup]="loginForm" (ngSubmit)="login()">
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Email address</label>
-                          <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <input  formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                           <span class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*Email ID is required</span>
                         </div>
                         <div class="mb-3">
@@ -21,7 +21,7 @@
                           <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Password Required</span>
                         </div>
                         <div>
-                        <input type="checkbox" value="isRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label>
+                        <input type="checkbox" value="isRememberMe" id="rememberMe"> <label for="rememberMe" (click)="signup()">Remember me</label>
                         </div>
                         <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary mt-2 float-end">Login</button>
                     </form>

@@ -9,14 +9,18 @@ import { MockDataService } from './mock-data.service';
 })
 export class AppComponent {
   title = 'task';
-
+  show = false
   constructor(private route:Router, public mock:MockDataService){ 
     this.route.navigate(['login'])
   }
-  loggedin(){
-    return localStorage.getItem('user')
-  }
+
   logout(){
-    localStorage.removeItem('user')
+    const confirmation = confirm('Are you sure to LOGOUT???')
+    if (confirmation) {
+      localStorage.clear();
+      this.route.navigate(['login'])
+    }
+
   }
+ 
 }

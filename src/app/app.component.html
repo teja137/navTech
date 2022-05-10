@@ -3,6 +3,9 @@
       <a class="navbar-brand" href="#">
         <img src="https://navtech.io/wp-content/uploads/2020/08/navtech_logo.png@width300namenavtech_logo.png" alt="" width="200" height="50">
       </a>
+      <div class="d-flex">
+        <button class="btn btn-outline-success" type="submit" (click)="logout()" *ngIf="show">Logout</button>
+      </div>
   </div>
 </nav>
 <router-outlet></router-outlet>

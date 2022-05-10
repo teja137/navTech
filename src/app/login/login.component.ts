@@ -10,12 +10,13 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm;
+  rememberMe;
   constructor(private formBuilder:FormBuilder,private http:HttpClient,private route:Router) { }
 
   ngOnInit(): void {
     this.loginForm=this.formBuilder.group({
       email :['', Validators.required],
-      password:['', Validators.required]
+      password:['', Validators.required,]
     })
   }
   login(){
@@ -38,5 +39,11 @@ export class LoginComponent implements OnInit {
       alert("something went wrong")
     })
   }
-  
+
+    signup(){
+      this.http.post<any>('http://localhost:3000/signUpUsers',this.loginForm.value)
+      .subscribe(res=>{
+      })
+    } 
+
 }
